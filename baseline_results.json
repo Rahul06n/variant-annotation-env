@@ -1,0 +1,121 @@
+{
+  "model": "gemini-2.0-flash",
+  "environment": "http://localhost:8000",
+  "num_episodes_per_task": 3,
+  "task_scores": {
+    "easy": {
+      "avg": 0.44999999999999996,
+      "min": 0.15,
+      "max": 0.75,
+      "scores": [
+        0.45,
+        0.75,
+        0.15
+      ]
+    },
+    "medium": {
+      "avg": 0.26666666666666666,
+      "min": 0.1,
+      "max": 0.6,
+      "scores": [
+        0.1,
+        0.1,
+        0.6
+      ]
+    },
+    "hard": {
+      "avg": 0.20000000000000004,
+      "min": 0.2,
+      "max": 0.2,
+      "scores": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    }
+  },
+  "overall_avg": 0.3055555555555556,
+  "episodes": [
+    {
+      "task": "hard",
+      "variant_id": "NM_007294.3:c.2077G>A",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.2,
+      "feedback": "Off by one tier (correct: Likely Benign).",
+      "correct_classification": null
+    },
+    {
+      "task": "easy",
+      "variant_id": "NM_007294.3:c.5096G>A",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.45,
+      "feedback": "Off by one tier (correct: Likely Pathogenic). Reasoning provided.",
+      "correct_classification": null
+    },
+    {
+      "task": "medium",
+      "variant_id": "NM_000059.3:c.6275_6276delTT",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.1,
+      "feedback": "Incorrect classification (correct: Pathogenic). No evidence codes submitted \u2014 required for medium task. Brief reasoning provided.",
+      "correct_classification": null
+    },
+    {
+      "task": "hard",
+      "variant_id": "NM_007294.3:c.2077G>A",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.2,
+      "feedback": "Off by one tier (correct: Likely Benign).",
+      "correct_classification": null
+    },
+    {
+      "task": "easy",
+      "variant_id": "NM_007294.3:c.4837A>G",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.75,
+      "feedback": "Correct classification. Reasoning provided.",
+      "correct_classification": "Uncertain Significance"
+    },
+    {
+      "task": "medium",
+      "variant_id": "NM_007294.3:c.3113A>G",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.1,
+      "feedback": "Incorrect classification (correct: Benign). No evidence codes submitted \u2014 required for medium task. Brief reasoning provided.",
+      "correct_classification": null
+    },
+    {
+      "task": "hard",
+      "variant_id": "NM_007294.3:c.2077G>A",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.2,
+      "feedback": "Off by one tier (correct: Likely Benign).",
+      "correct_classification": null
+    },
+    {
+      "task": "easy",
+      "variant_id": "NM_007294.3:c.3113A>G",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.15,
+      "feedback": "Incorrect classification (correct: Benign). Reasoning provided.",
+      "correct_classification": null
+    },
+    {
+      "task": "medium",
+      "variant_id": "NM_007294.3:c.4837A>G",
+      "model_classification": "Uncertain Significance",
+      "evidence_codes": [],
+      "reward": 0.6,
+      "feedback": "Correct classification. No evidence codes submitted \u2014 required for medium task. Brief reasoning provided.",
+      "correct_classification": "Uncertain Significance"
+    }
+  ]
+}

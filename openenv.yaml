@@ -1,0 +1,39 @@
+spec_version: 1
+name: variant_annotation_env
+type: space
+runtime: fastapi
+app: server.app:app
+port: 8000
+
+description: >
+  A real-world bioinformatics RL environment where an AI agent classifies
+  genomic variants using the ACMG/AMP 5-tier framework. Tasks range from
+  easy (pre-extracted structured evidence) to hard (conflicting multi-database
+  evidence requiring reconciliation). Directly models a task performed daily
+  by clinical geneticists worldwide.
+
+tasks:
+  - id: easy
+    description: Classify a variant given fully structured pre-extracted evidence
+    difficulty: easy
+    max_steps: 3
+    scoring: 0.0 to 1.0
+
+  - id: medium
+    description: Classify a variant from raw unstructured clinical notes
+    difficulty: medium
+    max_steps: 3
+    scoring: 0.0 to 1.0
+
+  - id: hard
+    description: Reconcile conflicting ClinVar, gnomAD, and literature evidence
+    difficulty: hard
+    max_steps: 3
+    scoring: 0.0 to 1.0
+
+tags:
+  - bioinformatics
+  - genomics
+  - clinical-genetics
+  - real-world
+  - openenv
