@@ -1,3 +1,13 @@
+---
+title: Variant Annotation Env
+emoji: 🧬
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+tags:
+  - openenv
+---
 # 🧬 Variant Annotation Environment
 
 > A real-world bioinformatics RL environment where AI agents classify genomic variants using the ACMG/AMP 5-tier framework — a task performed daily by clinical geneticists worldwide.
