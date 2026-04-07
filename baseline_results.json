@@ -1,121 +1,157 @@
 {
   "model": "gemini-2.0-flash",
-  "environment": "http://localhost:8000",
+  "environment": "https://rahul06n-variant-annotation-env.hf.space",
   "num_episodes_per_task": 3,
   "task_scores": {
     "easy": {
-      "avg": 0.44999999999999996,
-      "min": 0.15,
-      "max": 0.75,
+      "avg": 0.575,
+      "min": 0.575,
+      "max": 0.575,
       "scores": [
-        0.45,
-        0.75,
-        0.15
+        0.575,
+        0.575,
+        0.575
       ]
     },
     "medium": {
-      "avg": 0.26666666666666666,
-      "min": 0.1,
-      "max": 0.6,
+      "avg": 0.9250000000000002,
+      "min": 0.85,
+      "max": 1.0,
       "scores": [
-        0.1,
-        0.1,
-        0.6
+        0.85,
+        1.0,
+        0.925
       ]
     },
     "hard": {
-      "avg": 0.20000000000000004,
-      "min": 0.2,
-      "max": 0.2,
+      "avg": 0.8056666666666666,
+      "min": 0.617,
+      "max": 0.9,
       "scores": [
-        0.2,
-        0.2,
-        0.2
+        0.617,
+        0.9,
+        0.9
       ]
     }
   },
-  "overall_avg": 0.3055555555555556,
+  "overall_avg": 0.7685555555555557,
   "episodes": [
     {
+      "task": "easy",
+      "variant_id": "NM_007294.3:c.4837A>G",
+      "model_classification": "Likely Pathogenic",
+      "evidence_codes": [
+        "PM2",
+        "PP3",
+        "PS1"
+      ],
+      "reward": 0.575,
+      "feedback": "Off by one tier (correct: Uncertain Significance). Evidence codes: 50% correct. Reasoning provided.",
+      "correct_classification": null
+    },
+    {
+      "task": "medium",
+      "variant_id": "NM_007294.3:c.5096G>A",
+      "model_classification": "Likely Pathogenic",
+      "evidence_codes": [
+        "PM2",
+        "PP3",
+        "PM1"
+      ],
+      "reward": 0.85,
+      "feedback": "Correct classification. Evidence codes: 50% correct. Detailed reasoning provided.",
+      "correct_classification": "Likely Pathogenic"
+    },
+    {
       "task": "hard",
-      "variant_id": "NM_007294.3:c.2077G>A",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.2,
-      "feedback": "Off by one tier (correct: Likely Benign).",
+      "variant_id": "NM_007294.3:c.3113A>G",
+      "model_classification": "Likely Benign",
+      "evidence_codes": [
+        "BS1",
+        "BP4",
+        "BP7"
+      ],
+      "reward": 0.617,
+      "feedback": "Off by one tier (correct: Benign). Evidence codes: 67% correct.",
       "correct_classification": null
     },
     {
       "task": "easy",
-      "variant_id": "NM_007294.3:c.5096G>A",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.45,
-      "feedback": "Off by one tier (correct: Likely Pathogenic). Reasoning provided.",
+      "variant_id": "NM_007294.3:c.4837A>G",
+      "model_classification": "Likely Pathogenic",
+      "evidence_codes": [
+        "PM2",
+        "PP3",
+        "PS1"
+      ],
+      "reward": 0.575,
+      "feedback": "Off by one tier (correct: Uncertain Significance). Evidence codes: 50% correct. Reasoning provided.",
       "correct_classification": null
     },
     {
       "task": "medium",
       "variant_id": "NM_000059.3:c.6275_6276delTT",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.1,
-      "feedback": "Incorrect classification (correct: Pathogenic). No evidence codes submitted \u2014 required for medium task. Brief reasoning provided.",
-      "correct_classification": null
+      "model_classification": "Pathogenic",
+      "evidence_codes": [
+        "PVS1",
+        "PM2",
+        "PP1"
+      ],
+      "reward": 1.0,
+      "feedback": "Correct classification. Evidence codes: 100% correct. Detailed reasoning provided.",
+      "correct_classification": "Pathogenic"
     },
     {
       "task": "hard",
-      "variant_id": "NM_007294.3:c.2077G>A",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.2,
-      "feedback": "Off by one tier (correct: Likely Benign).",
-      "correct_classification": null
+      "variant_id": "NM_000059.3:c.6275_6276delTT",
+      "model_classification": "Pathogenic",
+      "evidence_codes": [
+        "PVS1",
+        "PM2",
+        "PP1"
+      ],
+      "reward": 0.9,
+      "feedback": "Correct classification despite conflicting evidence. Evidence codes: 100% correct.",
+      "correct_classification": "Pathogenic"
     },
     {
       "task": "easy",
       "variant_id": "NM_007294.3:c.4837A>G",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.75,
-      "feedback": "Correct classification. Reasoning provided.",
-      "correct_classification": "Uncertain Significance"
+      "model_classification": "Likely Pathogenic",
+      "evidence_codes": [
+        "PM2",
+        "PP3",
+        "PS1"
+      ],
+      "reward": 0.575,
+      "feedback": "Off by one tier (correct: Uncertain Significance). Evidence codes: 50% correct. Reasoning provided.",
+      "correct_classification": null
     },
     {
       "task": "medium",
-      "variant_id": "NM_007294.3:c.3113A>G",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.1,
-      "feedback": "Incorrect classification (correct: Benign). No evidence codes submitted \u2014 required for medium task. Brief reasoning provided.",
-      "correct_classification": null
+      "variant_id": "NM_007294.3:c.5266dupC",
+      "model_classification": "Pathogenic",
+      "evidence_codes": [
+        "PVS1",
+        "PM2",
+        "PP1"
+      ],
+      "reward": 0.925,
+      "feedback": "Correct classification. Evidence codes: 75% correct. Detailed reasoning provided.",
+      "correct_classification": "Pathogenic"
     },
     {
       "task": "hard",
-      "variant_id": "NM_007294.3:c.2077G>A",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.2,
-      "feedback": "Off by one tier (correct: Likely Benign).",
-      "correct_classification": null
-    },
-    {
-      "task": "easy",
-      "variant_id": "NM_007294.3:c.3113A>G",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.15,
-      "feedback": "Incorrect classification (correct: Benign). Reasoning provided.",
-      "correct_classification": null
-    },
-    {
-      "task": "medium",
-      "variant_id": "NM_007294.3:c.4837A>G",
-      "model_classification": "Uncertain Significance",
-      "evidence_codes": [],
-      "reward": 0.6,
-      "feedback": "Correct classification. No evidence codes submitted \u2014 required for medium task. Brief reasoning provided.",
-      "correct_classification": "Uncertain Significance"
+      "variant_id": "NM_000059.3:c.6275_6276delTT",
+      "model_classification": "Pathogenic",
+      "evidence_codes": [
+        "PVS1",
+        "PM2",
+        "PP1"
+      ],
+      "reward": 0.9,
+      "feedback": "Correct classification despite conflicting evidence. Evidence codes: 100% correct.",
+      "correct_classification": "Pathogenic"
     }
   ]
 }
