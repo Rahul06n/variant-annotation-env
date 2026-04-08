@@ -24,7 +24,7 @@ from openai import OpenAI
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-DEFAULT_URL = "https://rahul06n-variant-annotation-env.hf.space"
+DEFAULT_URL = "http://localhost:8000"
 MODEL = "gemini-2.0-flash"
 NUM_EPISODES_PER_TASK = 3  # run each task N times for stable scores
 TASKS = ["easy", "medium", "hard"]
@@ -147,8 +147,11 @@ def run_episode(base_url: str, client=None) -> dict:
     reset_data = reset_resp.json()
     observation = reset_data["observation"]
     task = observation["task_id"]
+    variant_id = observation.get("variant_id", "N/A")
 
-    print(f"\n  Task: {task.upper()} | Variant: {observation.get('variant_id', 'N/A')}")
+    # Structured output: START
+    print(f"[START] task={task}", flush=True)
+    print(f"\n  Task: {task.upper()} | Variant: {variant_id}")
 
     # Get model action — try LLM first, fall back to rule-based
     action = None
@@ -183,9 +186,13 @@ def run_episode(base_url: str, client=None) -> dict:
     if correct:
         print(f"  Correct answer: {correct}")
 
+    # Structured output: STEP and END
+    print(f"[STEP] step=1 reward={reward:.4f}", flush=True)
+    print(f"[END] task={task} score={reward:.4f} steps=1", flush=True)
+
     return {
         "task": task,
-        "variant_id": observation.get("variant_id", ""),
+        "variant_id": variant_id,
         "model_classification": action.get("classification", ""),
         "evidence_codes": action.get("evidence_codes", []),
         "reward": reward,
