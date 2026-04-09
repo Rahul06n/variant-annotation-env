@@ -24,7 +24,7 @@ from openai import OpenAI
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-DEFAULT_URL = "http://localhost:8000"
+DEFAULT_URL = "https://rahul06n-variant-annotation-env.hf.space"
 MODEL = "gemini-2.0-flash"
 NUM_EPISODES_PER_TASK = 3  # run each task N times for stable scores
 TASKS = ["easy", "medium", "hard"]
