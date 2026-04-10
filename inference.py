@@ -233,9 +233,10 @@ def run_episode(env_url: str) -> dict:
     except Exception as e:
         print(f"Step error: {e}", file=sys.stderr)
 
-    sys.stdout.write(f"[START] task={task}\n");                          sys.stdout.flush()
-    sys.stdout.write(f"[STEP] step=1 reward={round(reward,3)}\n");       sys.stdout.flush()
-    sys.stdout.write(f"[END] task={task} score={round(reward,3)} steps=1\n"); sys.stdout.flush()
+    safe_score = round(max(0.01, min(0.99, reward)), 3)
+    sys.stdout.write(f"[START] task={task}\n");                               sys.stdout.flush()
+    sys.stdout.write(f"[STEP] step=1 reward={safe_score}\n");                 sys.stdout.flush()
+    sys.stdout.write(f"[END] task={task} score={safe_score} steps=1\n");      sys.stdout.flush()
 
     return {"task": task, "reward": reward}
 
